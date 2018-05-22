@@ -33,7 +33,7 @@ fpm:
 
 # database
 mysql:
-  image: mysql:latest
+  image: mysql:5.6
   ports:
     # Allow client to access 3306
     - "8306:3306"
@@ -41,4 +41,4 @@ mysql:
     # NOTE: your data will be stored in ./mysql
     - ./mysql:/var/lib/mysql
   environment:
-    - MYSQL_ROOT_PASSWORD=your_mysql_password
+    - MYSQL_ROOT_PASSWORD=openrasp

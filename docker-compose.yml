@@ -19,8 +19,10 @@ fpm:
     - "9000"
   volumes:
     - ./app/src:/usr/share/nginx/html
+    - ./php-fpm/work:/tmp/openrasp
     # Your php.ini
     - ./php-fpm/php.ini-production:/usr/local/etc/php/php.ini:ro
+    - ./php-fpm/ext/openrasp.so:/tmp/openrasp.so:ro
     - ./php-fpm/conf.d/openrasp.ini:/usr/local/etc/php/conf.d/z_openrasp.ini:ro
   # environment:
     # Set your APP env variables here:

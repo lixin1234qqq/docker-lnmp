@@ -18,7 +18,7 @@ fpm:
   ports:
     - "9000"
   volumes:
-    - ./app/src/discuz/x3.2:/usr/share/nginx/html
+    - ./app/src/discuz/x3.2:/usr/share/nginx/html:rw
     - ./php-fpm/work:/tmp/openrasp
     # Your php.ini
     - ./php-fpm/php.ini-production:/usr/local/etc/php/php.ini:ro

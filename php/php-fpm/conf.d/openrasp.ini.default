@@ -1,6 +1,6 @@
 ;OPENRASP BEGIN
 	
-extension=/tmp/openrasp.so
+[[[TAG]]]extension=/tmp/openrasp.so
 openrasp.root_dir=/tmp/5
 	
 ;拦截攻击后，跳转到这个URL，并增加 request_id 参数

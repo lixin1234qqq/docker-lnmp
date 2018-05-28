@@ -21,10 +21,10 @@ fpm:
     - ./app/src/[[[NAME]]][[[ROOTSUFFIX]]]:/usr/share/nginx/html:rw
     - ./php-fpm/work:/tmp/openrasp
     # Your php.ini
+    - ./php-fpm/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf:ro
     - ./php-fpm/php.ini-production:/usr/local/etc/php/php.ini:ro
     - ./php-fpm/ext/openrasp.so:/tmp/openrasp.so:ro
     - ./php-fpm/conf.d/openrasp.ini:/usr/local/etc/php/conf.d/z_openrasp.ini:ro
-    - ./php-fpm/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf:ro
   # environment:
     # Set your APP env variables here:
     # - APP_KEY=
